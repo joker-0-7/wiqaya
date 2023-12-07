@@ -8,12 +8,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid crimson; */
 }
-.navbar-dark,
-.navbar[data-bs-theme="dark"] {
-  background-color: var(--darkColor) !important;
-}
+
 body {
   direction: rtl;
   behavior: smooth;
@@ -21,27 +17,28 @@ body {
 }
 
 nav .container h1 {
-  color: var(--lightBlueColor);
+  color: #333;
 }
 
 ul li a {
   position: relative;
-  font-size: 20px;
+  font-size: 20px !important;
   text-decoration: none;
-  color: #eee;
+  font-weight: 600 !important;
+  color: #333;
   transition: 0.6s color;
 }
 
 ul li a.active,
 ul li a:hover {
-  color: var(--lightBlueColor) !important;
+  color: #111 !important;
 }
 ul li a.active::after {
   content: "";
   position: absolute;
   width: 15px;
   height: 3px;
-  background-color: var(--lightBlueColor);
+  background-color: red;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% - 5px));
@@ -51,39 +48,40 @@ ul li a.active::before {
   position: absolute;
   width: 5px;
   height: 3px;
-  background-color: var(--lightBlueColor);
+  background-color: red;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% + 10px));
 }
 .home {
-  min-height: calc(100vh - 72px);
+  height: calc(100vh - 72px);
   background-color: var(--lightBlueColor);
 }
 .home .container .row {
-  min-height: calc(100vh - 72px);
+  height: calc(100vh - 72px);
   align-items: center;
 }
 .home .container .row h1 span {
-  color: var(--darkBlueColor);
+  color: red;
 }
 .home .container .row .img img {
   max-width: 100%;
 }
 .service {
   min-height: 50vh;
-  background-color: var(--darkColor);
+  background-color: #eee;
+  color: #333;
 }
 .service .nav-pills {
   width: fit-content;
 }
 .nav-pills .nav-link {
-  border: 1px solid var(--darkBlueColor);
-  color: #eee;
+  border: 1px solid #333;
+  color: #333;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background-color: var(--darkBlueColor);
+  background-color: #333;
   color: #eee;
 }
 .tab-pane.fade.show.active {
@@ -103,6 +101,8 @@ ul li a.active::before {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  height: 300px;
+  border-radius: 8px;
 }
 .swiper-slide svg {
   font-size: 30px;
@@ -120,38 +120,107 @@ ul li a.active::before {
   height: 300px;
   margin: 20px auto;
 }
-
-.append-buttons {
-  text-align: center;
-  margin-top: 20px;
+.main h1 {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 30px;
 }
-
-.append-buttons button {
-  display: inline-block;
-  cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin: 0 10px;
-  font-size: 13px;
+.main h1::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 3px;
+  background-color: red;
+  bottom: -10px;
+  left: 0;
 }
-
+.main h1::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 3px;
+  background-color: red;
+  bottom: -10px;
+  right: 0;
+}
+.products {
+  min-height: auto;
+  background-color: var(--lightBlueColor);
+}
+.products .product {
+  position: relative;
+  background-color: var(--darkBlueColor);
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 300px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.products .product .img img {
+  padding: 10px;
+  border: 1px solid var(--darkBlueColor);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 90px);
+}
+.about-us {
+  min-height: auto;
+  background-color: var(--lightBlueColor);
+  font-size: 19px;
+}
+.about-us .row {
+  min-height: auto;
+  align-items: center;
+}
+.about-us .row img {
+  width: 60%;
+  float: left;
+}
 .contact-now {
+  z-index: 9;
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
   height: 100px;
-  display: none;
+  display: flex;
   flex-direction: column;
   background-color: transparent;
 }
-.contact-now svg {
-  font-size: 30px;
+.sec-three {
+  background-color: #eee;
+  height: 84vh;
 }
-
+.sec-three .carousel-inner {
+  width: 50%;
+}
+.contact-now img {
+  width: 50px;
+}
+.carousel-item img {
+  max-height: 650px;
+}
 @media (max-width: 720px) {
+  .sec-three {
+    height: auto;
+  }
+  .home {
+    min-height: auto;
+    background-color: var(--lightBlueColor);
+  }
+  .home .container {
+    padding-top: 30vh;
+  }
+  .home .container .row {
+    min-height: auto;
+    align-items: center;
+  }
   ul li a.active,
   ul li a:hover {
     width: fit-content;
