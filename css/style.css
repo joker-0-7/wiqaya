@@ -13,22 +13,15 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* width */
 ::-webkit-scrollbar {
   width: 3px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -37,30 +30,27 @@ body {
   behavior: smooth;
   font-family: "cairo";
 }
-
 nav .container h1 {
-  color: #950101;
+  color: #f9f9f9;
 }
-
 ul li a {
   position: relative;
   font-size: 20px !important;
   text-decoration: none;
   font-weight: 600 !important;
-  color: #eee;
+  color: #f9f9f9 !important;
   transition: 0.6s color;
 }
-
 ul li a.active,
 ul li a:hover {
-  color: #950101 !important;
+  color: #ff0000 !important;
 }
 ul li a.active::after {
   content: "";
   position: absolute;
   width: 15px;
   height: 3px;
-  background-color: #3d0000;
+  background-color: #ff0000;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% - 5px));
@@ -70,14 +60,14 @@ ul li a.active::before {
   position: absolute;
   width: 5px;
   height: 3px;
-  background-color: #3d0000;
+  background-color: #ff0000;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% + 10px));
 }
 .home {
   min-height: calc(100vh - 72px);
-  background-color: var(--lightBlueColor);
+  background-color: #f9f9f9;
 }
 .home .container .row {
   min-height: calc(100vh - 72px);
@@ -98,12 +88,12 @@ ul li a.active::before {
   width: fit-content;
 }
 .nav-pills .nav-link {
-  border: 1px solid #333;
-  color: #333;
+  border: 1px solid #ff0000;
+  color: #000000;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background-color: #333;
+  background-color: #ff0000;
   color: #eee;
 }
 .tab-pane.fade.show.active {
@@ -113,11 +103,10 @@ ul li a.active::before {
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: var(--darkBlueColor);
+  background: var(--one);
   color: #eee;
   display: flex;
   justify-content: space-evenly;
@@ -129,14 +118,12 @@ ul li a.active::before {
 .swiper-slide svg {
   font-size: 30px;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .swiper {
   width: 100%;
   height: 300px;
@@ -146,13 +133,14 @@ ul li a.active::before {
   position: relative;
   width: fit-content;
   margin-bottom: 30px;
+  color: #950101;
 }
 .main h1::after {
   content: "";
   position: absolute;
   width: 75%;
   height: 3px;
-  background-color: red;
+  background-color: #950101;
   bottom: -10px;
   left: 0;
 }
@@ -161,40 +149,13 @@ ul li a.active::before {
   position: absolute;
   width: 20%;
   height: 3px;
-  background-color: red;
+  background-color: #950101;
   bottom: -10px;
   right: 0;
 }
-.products {
-  min-height: auto;
-  background-color: var(--lightBlueColor);
-}
-.products .product {
-  position: relative;
-  background-color: var(--darkBlueColor);
-  padding: 10px;
-  border-radius: 10px;
-  min-height: 300px;
-  color: #eee;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.products .product .img img {
-  padding: 10px;
-  border: 1px solid var(--darkBlueColor);
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, 90px);
-}
 .about-us {
   min-height: auto;
-  background-color: var(--lightBlueColor);
+  background-color: #f9f9f9;
   font-size: 19px;
 }
 .about-us .row {
