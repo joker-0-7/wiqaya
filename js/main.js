@@ -11,4 +11,4 @@ links.forEach((link) => {
 
 setInterval(() => {
   document.querySelector("#carouselExample2 .carousel-control-next").click();
-}, 3000);
+}, 5000);

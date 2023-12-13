@@ -3,13 +3,35 @@
   --darkBlueColor: #0f4c75;
   --blueColor: #3282b8;
   --lightBlueColor: #bbe1fa;
+  --black: #000000;
+  --one: #3d0000;
+  --two: #950101;
+  --red: #ff0000;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 body {
   direction: rtl;
   behavior: smooth;
@@ -17,7 +39,7 @@ body {
 }
 
 nav .container h1 {
-  color: #333;
+  color: #950101;
 }
 
 ul li a {
@@ -25,20 +47,20 @@ ul li a {
   font-size: 20px !important;
   text-decoration: none;
   font-weight: 600 !important;
-  color: #333;
+  color: #eee;
   transition: 0.6s color;
 }
 
 ul li a.active,
 ul li a:hover {
-  color: #111 !important;
+  color: #950101 !important;
 }
 ul li a.active::after {
   content: "";
   position: absolute;
   width: 15px;
   height: 3px;
-  background-color: red;
+  background-color: #3d0000;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% - 5px));
@@ -48,17 +70,17 @@ ul li a.active::before {
   position: absolute;
   width: 5px;
   height: 3px;
-  background-color: red;
+  background-color: #3d0000;
   bottom: -5px;
   left: 50%;
   transform: translateX(calc(-50% + 10px));
 }
 .home {
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
   background-color: var(--lightBlueColor);
 }
 .home .container .row {
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
   align-items: center;
 }
 .home .container .row h1 span {
@@ -195,7 +217,7 @@ ul li a.active::before {
 }
 .sec-three {
   background-color: #eee;
-  height: 84vh;
+  min-height: 84vh;
 }
 .sec-three .carousel-inner {
   width: 50%;
@@ -205,6 +227,9 @@ ul li a.active::before {
 }
 .carousel-item img {
   max-height: 650px;
+}
+footer img {
+  width: 50px;
 }
 @media (max-width: 720px) {
   .sec-three {
@@ -245,5 +270,25 @@ ul li a.active::before {
     bottom: -5px;
     left: 50%;
     transform: translateX(calc(-50% + 10px));
+  }
+  iframe {
+    width: 300px !important;
+    height: 150px !important;
+  }
+  .sec-three {
+    background-color: #eee;
+    min-height: auto;
+  }
+  .sec-three .carousel-inner {
+    width: 50%;
+  }
+  .contact-now img {
+    width: 50px;
+  }
+  .carousel-item img {
+    max-height: 650px;
+  }
+  footer img {
+    width: 50px;
   }
 }
