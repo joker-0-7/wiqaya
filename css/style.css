@@ -29,6 +29,7 @@ body {
   direction: rtl;
   behavior: smooth;
   font-family: "cairo";
+  overflow-x: hidden;
 }
 nav .container h1 {
   color: #f9f9f9;
@@ -197,15 +198,28 @@ footer img {
     height: auto;
   }
   .home {
-    min-height: auto;
-    background-color: var(--lightBlueColor);
+    min-height: 60vh;
   }
   .home .container {
-    padding-top: 30vh;
+    /* padding-top: 30vh; */
   }
   .home .container .row {
+    min-height: 60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .about-us .row {
     min-height: auto;
     align-items: center;
+    justify-content: center;
+  }
+  .about-us .row div.img {
+    text-align: center;
+  }
+  .about-us .row img {
+    width: 60%;
+    float: none;
   }
   ul li a.active,
   ul li a:hover {
@@ -217,7 +231,7 @@ footer img {
     position: absolute;
     width: 15px;
     height: 3px;
-    background-color: var(--lightBlueColor);
+
     bottom: -5px;
     left: 50%;
     transform: translateX(calc(-50% - 5px));
@@ -227,7 +241,7 @@ footer img {
     position: absolute;
     width: 5px;
     height: 3px;
-    background-color: var(--lightBlueColor);
+
     bottom: -5px;
     left: 50%;
     transform: translateX(calc(-50% + 10px));
