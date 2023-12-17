@@ -91,6 +91,15 @@ ul li a.active::before {
 .home h1 span {
   font-size: 3rem;
 }
+.home h1 {
+  font-size: 44px;
+}
+.home h2 {
+  font-size: 40px;
+}
+.home h2 {
+  font-size: 30px;
+}
 .home .container {
   position: relative;
   z-index: 999;
