@@ -4,7 +4,7 @@
   --blueColor: #3282b8;
   --lightBlueColor: #bbe1fa;
   --black: #000000;
-  --one: #3d0000;
+  --one: #740202;
   --two: #950101;
   --red: #ff0000;
 }
@@ -243,7 +243,7 @@ footer .left {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  padding-right: 50px;
 }
 .to-up {
   position: fixed;
@@ -307,7 +307,6 @@ footer .left {
     position: absolute;
     width: 5px;
     height: 3px;
-
     bottom: -5px;
     left: 50%;
     transform: translateX(calc(-50% + 10px));
